@@ -3,7 +3,6 @@
  * @flow
  */
 import React, { Component, createRef } from 'react';
-import { processColor } from 'react-native';
 
 import NativeLinearGradient, { type Props } from './src';
 
@@ -56,7 +55,7 @@ export default class LinearGradient extends Component<Props> {
         {...otherProps}
         startPoint={convertPoint('start', start)}
         endPoint={convertPoint('end', end)}
-        colors={colors.map(processColor)}
+        colors={colors}
         locations={locations ? locations.slice(0, colors.length) : null}
         useAngle={useAngle}
         angleCenter={convertPoint('angleCenter', angleCenter)}
